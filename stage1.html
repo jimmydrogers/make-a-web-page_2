@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stage 1 Project</title>
+	<link rel="stylesheet" href="stage1.css">
+	<base target='_blank' />
+</head>
+<body>
+
+<h1>Making Your Own Web Page</h1>
+
+<div class="TOC">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#lesson-1" target="_self">Lesson 1: The Basics of the Web and HTML</a>
+        <ul>
+          <li><a href="#lesson-1-1" target="_self">Basics of the Web</a></li>
+          <li><a href="#lesson-1-2" target="_self">HTML</a></li>
+          <li><a href="#lesson-1-3" target="_self">HTML Markup Tags</a></li>
+          <li><a href="#lesson-1-4" target="_self">Span / Div</a></li>
+          <li><a href="#lesson-1-5" target="_self">HTML Document Structure</a></li>
+        </ul>
+      </li>
+      <li class="TOC-lesson"><a href="#lesson-2" target="_self">Lesson 2: Creating a Strutured Document with HTML</a>
+        <ul>
+          <li><a href="#lesson-2-1" target="_self">Developer Tools (in the Browser)</a></li>
+          <li><a href="#lesson-2-2" target="_self">The Tree Like Structure of HTML</a></li>
+          <li><a href="#lesson-2-3" target="_self">The Relationship Between indented HTML and Boxes</a></li>
+          <li><a href="#lesson-2-4" target="_self">Text Editors</a></li>
+        </ul>
+      </li>
+      <li class="TOC-lesson"><a href="#lesson-3" target="_self">Lesson 3: Adding CSS Style to HTML Structure</a>
+        <ul>
+          <li><a href="#lesson-3-1" target="_self">Adding Style</a></li>
+          <li><a href="#lesson-3-2" target="_self">Understanding CSS</a></li>
+          <li><a href="#lesson-3-3" target="_self">Styling Up</a></li>
+          <li><a href="#lesson-3-4" target="_self">Using Semantic Tags</a></li>
+          <li><a href="#lesson-3-5" target="_self">The Box Revisited</a></li>
+          <li><a href="#lesson-3-6" target="_self">Code, Test, and Refine</a></li>
+          <li><a href="#lesson-3-7" target="_self">Verify HTML and CSS</a></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+
+<div class="lesson">
+	<h2 id="lesson-1">Lesson 1: The Basics of the Web and HTML</h2>
+	<div class="concept" id="lesson-1-1">
+		<div class="concept-title">
+			Basics of the Web
+		</div>
+		<div class="concept-description">
+			<h4>The major components of the web</h4>
+			
+			<p>
+			- The Internet<br>
+			- Servers<br>
+			- The user's Browser<br>
+			- And HTTP which is the main protocol of the web
+			</p>
+			<p>
+			Invented in the early 1990's, the web is a collection of HTML documents, images, videos, and music. The main document is HTML.
+			</p>
+		</div>
+	</div>
+
+
+	<div class="concept" id="lesson-1-2">
+		<div class="concept-title">
+			HTML
+		</div>
+		<div class="concept-description">
+			<h4>HTML = Hyper Text Markup Language</h4>
+			<p>
+			- Text content (what you see)<br>
+			- Markup (what it looks like)<br>
+			- References to other documents<br>
+			- Links to other pages
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-1-3">
+			HTML Markup Tags
+		</div>
+
+		<div class="concept-description">
+			<p>
+			Element = <span style="color: #ff0000">&lt;Opening Tag&gt;</span> <span style="color: #0000ff">CONTENTS</span> <span style="color: #ff0000">&lt;Closing Tag&gt;</span><br>
+			<br>Examples:<br>
+			<span style="color: #000000">Bold Tag = </span><span style="color: #ff0000">&lt;b&gt;</span><span style="color: #0000ff">CONTENTS</span><span style="color: #ff0000">&lt;/b&gt;</span><br>
+			<span style="color: #000000">M Tag (Italics/Emphasis) = </span><span style="color: #ff0000">&lt;em&gt;</span><span style="color: #0000ff">CONTENTS</span><span style="color: #ff0000">&lt;/em&gt;</span>
+			</p>
+			Note: Tags can have multiple attributes.
+			<p>
+			<span style="color: #000000">Anchor Tag &lt;a&gt; are for links</span><br>
+			<span style="color: #000000">Example = </span><span style="color: #ff0000"><span>&lt;a href=&quot;www.reddit.com&quot;&gt; </span></span><span style="color: #0000ff"><span>Click here for Reddit </span></span><span style="color: #ff0000"><span>&lt;/a&gt;</span></span>
+			</p>
+
+			<p>
+			<span><span style="color: #000000">Image Tag &lt;img&gt; for images (no end tag as this is a void tag)</span></span><br /><span style="color: #ff0000"><span><span><span style="color: #000000">Example = </span>&lt;img src=&quot;url&quot; alt=&quot;text&quot;&gt;</span></span></span>
+			</p>
+
+			<p>
+			White Space - &lt;br&gt; &lt;p&gt;
+			</p>
+
+			<p>
+			In Line Elements - &lt;br&gt; &lt;b&gt; &lt;img&gt; &lt;em&gt;
+			</p>
+
+			<p>
+			Block Elements - &lt;p&gt; (creates an invisible box having height and width)
+			</p>
+		</div>
+	</div>
+
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-1-4">
+			Span / Div
+		</div>
+
+		<div class="concept-description">
+			<p>
+			SPAN is in line and DIV is block
+			</p>
+
+			<p><span style="color: #ff0000">&lt;span class = &quot;foo&quot;&gt;</span><span style="color: #0000ff">CONTENTS</span><span style="color: #ff0000">&lt;/span&gt;</span></p>
+
+			<p><span style="color: #ff0000">&lt;div class = &quot;bar&quot;&gt;</span><span style="color: #0000ff"><span>CONTENTS</span></span><span style="color: #ff0000">&lt;/div&gt;</span></p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-1-5">
+			HTML Document Structure
+		</div>
+
+		<div class="concept-description">
+			<h4><span style="color: #000000">HTML Document Structure</span></h4>
+
+			<p><span style="color: #ff0000">&lt;!DOCTYPE HTML&gt;&nbsp; </span><span style="color: #000000">(the document type is HTML)</span><br>
+			<span style="color: #ff0000">&lt;html&gt;</span><br>
+			<span style="color: #ff0000">&lt;head&gt;</span><br>
+			<span style="color: #ff0000">&lt;title&gt;</span><span style="color: #0000ff"><span>CONTENTS</span></span><span style="color: #ff0000">&lt;/title&gt; </span><span style="color: #000000">(title of web page which is displayed at top of browser page)</span><br>
+			&nbsp;<span style="color: #ff0000">&lt;/head&gt;</span><br>
+			<span style="color: #ff0000">&lt;body&gt;</span><br>
+			<span style="color: #ff0000">&lt;b&gt;</span><span style="color: #0000ff"><span>CONTENTS</span></span><span style="color: #ff0000">&lt;/b&gt;</span><br>
+			<span style="color: #ff0000">&lt;/body&gt;</span><br>
+			<span style="color: #ff0000">&lt;/html&gt;</span></p>
+		</div>
+	</div>
+</div>
+
+
+<div class="lesson">
+	<h2 id="lesson-2">Lesson 2: Creating a Structured Document with HTML</h2>
+	<div class="concept">
+		<div class="concept-title" id="lesson-2-1">
+			Developer Tools (in the browser)
+		</div>
+		<div class="concept-description">
+			<p>
+			HTML elements are either in line or block. Block elements have an invisible box around the content.
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-2-2">
+			The Tree Like Structure of HTML
+		</div>
+		<div class="concept-description">
+			<p>
+			HTML elements can have other elements inside of them. In a browser the structure shows up as series of nested boxes.
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-2-3">
+			The Relationship Between indented HTML and Boxes
+		</div>
+		<div class="concept-description">
+			<p>
+			hen reading an HTML document as text you see&nbsp;a wave of changing indentations. The more indented the element the more deeply nested the corresponding box is.
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-2-4">
+			Text Editors
+		</div>
+		<div class="concept-description">
+			<p>
+			Editors like Sublime Text makes a programmers life easier.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="lesson">
+	<h2 id="lesson-3">Lesson 3: Adding CSS Style to HTML Structure</h2>
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-1">
+			Adding Style
+		</div>
+		<div class="concept-description">
+			<p>
+			<p>Add CSS style to the head section of HTML document using a link pointing to a CSS file.
+			</p>
+
+			<p>&lt;link rel= Stylesheet&quot; href=&quot;style.css&quot;&gt;
+			</p>
+
+			<p><span style="color: #0000ff">Example content of HTML with a CSS file:</span>
+			</p>
+
+			<p>HTML: &lt;div class=&quot;description&quot;&gt;Test&lt;/div&gt;
+			</p>
+
+			<p>CSS File content: .description {color : red;}
+			</p>
+
+			<p>Results in the text &quot;<span style="color: #ff0000">Test</span><span style="color: #000000">&quot;.</span>
+			</p>
+
+			<p><span style="color: #000000">Alternativley you can add style without using a seperate CSS file and &lt;link&gt; tag by using &lt;style&gt; tags within your html document.</span>
+			</p>
+
+			<p><span style="color: #0000ff">Example of CSS within HTML:</span>
+			</p>
+
+			<p><span style="color: #ff0000">&lt;style&gt;</span>
+			</p>
+
+			<p><span style="color: #ff0000">h1 { color : red}</span>
+			</p>
+
+			<p><span style="color: #ff0000">&lt;/style&gt;</span>
+			</p>
+
+			<p><span style="color: #ff0000">&lt;h1&gt;test&lt;/h1&gt;</span>
+			</p>
+
+			<p>Results in the text &quot;<span style="color: #ff0000">Test</span><span style="color: #000000">&quot;.</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-2">
+			Understanding CSS
+		</div>
+		<div class="concept-description">
+			<p>When working on designing a web page / site there is a method called abstraction which is to find similarity or generality amongst seemly different things to avoid unnecessary repetition of work.
+			</p>
+
+			<p>When tags like font, and color attributes were added to the HTML, it started a nightmare for web developers. Development of large web sites, where fonts and color information were added to every single page, became a long and expensive process. To solve this problem,&nbsp;CSS was created.
+			</p>
+
+			<p>Inheritance is a key feature of CSS and prevents certain properties from being declared over and over again in a style sheet allowing programmers to write less code.&nbsp; It is a mechanism by which properties are applied not only to a specific element but also to its descendants. &nbsp;Descendant elements may inherit CSS property values from any ancestor element enclosing them.
+			</p>
+
+			<p>In general descendant elements inherit test related properties. Box related properties are not inherited. Properties that can be inherited are color, font, letter spacing, line-height, list, style, text align, text indent, text transform, white space, and word spacing.
+			</p>
+
+			<p>Properties that cannot be inherited are background, border display, float and clear, height and width, margin, min and max height and width, outline, overflow, padding, position, text decoration, vertical align, and Z-index.
+			</p>
+
+			<p>CSS will allow you to define things once making it far more efficient than defining everything&nbsp;in HTML on every page which means you will type less code and your pages will be shorter and neater.
+			</p>
+		</div>
+	</div>
+
+	
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-3">
+			Styling Up
+		</div>
+		<div class="concept-description">
+			<p><span style="color: #000000">In CSS you first write what is called a selector which defines what element of the page a paticular style will apply to. For eaxmple you can select an HTML tag and will apply to all tags on the page such as a style for all paragraphs </span><span style="color: #ff0000"><span>p {color : red;}</span></span><span><span style="color: #000000">.</span></span>
+			</p>
+
+			<p><span><span style="color: #000000">Another way is to select elements by <strong>class</strong>. For example using the &lt;div&gt; example above in&nbsp;<strong>Adding Style </strong>a style can be defined by specifying the name of the class:</span></span>
+			</p>
+
+			<p><span><span style="color: #ff0000">.description {color : red;}</span></span>
+			</p>
+
+			<p><span><span style="color: #000000">For addtional information click <a href="https://css-tricks.com/how-css-selectors-work/">here</a>&nbsp;for article on How CSS Selectors Work.</span></span>
+			</p>
+
+			<p><span><span style="color: #000000">Also the following <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">reference</a> lists all standard properties to allow you to quickly access detailed information for each item.</span></span>
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-4">
+			Using Semantic Tags
+		</div>
+		<div class="concept-description">
+			<p><span><span style="color: #000000">Changing visual properties of an element only changes how the element is displayed. Also </span></span><span><span style="color: #000000">Browsers use default stylesheets to determine how to display HTML elements which can present a challenge to maintain consistency between different browsers. In a effort to promote consistency, a popular solution called CSS Reset found at -<br>
+			<a href="http://necolas.github.io.normalize.css/">HTTP://necolas.github.io.normalize.css/</a>&nbsp;makes browsers render all elements more consistent and inline with modern standards. It targets only the styles that need nomralizing.</span></span>
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-5">
+			The Box Revisited
+		</div>
+		<div class="concept-description">
+			<h4><span><span style="color: #000000">The box model consists of margins, border, padding, and content.</span></span></h4>
+
+			<p><span><span style="color: #000000">* Content is image or text that appears on the web page.<br>
+			* Padding clears an area around the content and is affected by the background color of the box. It is the space inside the box that protects the content.<br>
+			* Border goes around the padding and the content and is inherited from the color properties of the box.<br>
+			* Margin clears an area around the border and is transparent and can be looked at a space between boxes.</span></span>
+			</p>
+
+			<h4><span><span style="color: #000000">Box Sizing</span></span></h4>
+
+			<p><span><span style="color: #000000">The size of an element is equal to the sum of the left and right border, sum of the left and right padding, and the size of the content. This presents challenges on knowing how much box is taken up on the screen without calculating each time a change is made to a value to a border, pad, or content. An easier way to determine how much space for a box is with the use of a model CSS Style </span></span><span style="color: #ff0000">box-sizing : border-box</span><span style="color: #000000">. This&nbsp; makes the calculation of the element size include both the border and padding to make layouts easier.</span>
+			</p>
+
+			<p><span style="color: #000000">You can set the width of the overall box an no matter how much you tweak the border and padding sizes, the size of the box will always stay the same. For example:</span><br>
+			<span style="color: #ff0000">max-width : 705px</span><span style="color: #000000">.<br>
+			<br>
+			Note:<br>
+			Margin size is not included.<br>
+			You can specify a size using percentage of the user display instead of pixels, i.e. </span><span style="color: #ff0000">max-width : 50%;</span>
+			</p>
+
+			<h4><span style="color: #000000">Positioning Boxes</span></h4>
+
+			<p><span style="color: #000000">Div&#39;s are block elements so by default they take up the entire width of a page. Adding the rule </span><span style="color: #ff0000">display : flex </span><span style="color: #000000">to the appropiate CSS will override this behavior and let Div&#39;s appear next to each other.<br>
+			Example:</span><br>
+			<span style="color: #ff0000">.app { display : flex; }</span>
+			</p>
+
+			<h4><span style="color: #000000">Older Browsers</span></h4>
+
+			<p><span style="color: #000000">To ensure content is displayed properly on older browsers need to add browser specific prefixes to the CSS Style box and they are:</span><br>
+			<span style="color: #ff0000"><span>webkit-box-sizing : border-box;<br>
+			moz-box-sizing : border-box;<br>
+			ms-bix-sizing : border-box;</span></span><br>
+			<br />
+			<span><span style="color: #000000">Click <a href="https://developer.mozilla.org/en-US/docs/web/css/box-sizing">here</a>&nbsp;to see more on box-sizing and other values besides border-box.</span></span>
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-6">
+			Code, Test, and Refine
+		</div>
+		<div class="concept-description">
+			<p><span><span style="color: #000000">1. Look for natural boxes.<br>
+			2. Look for repeated styles and semantic elements.<br>
+			3. Write your HTML.<br>
+			4. Apply styles from biggest to smallest.<br>
+			5. Fix the small things.</span></span>
+			</p>
+		</div>
+	</div>
+
+	<div class="concept">
+		<div class="concept-title" id="lesson-3-7">
+			Verify HTML and CSS
+		</div>
+		<div class="concept-description">
+			<p><span><span style="color: #000000">Imprtant to verify that HTML and CSS complies with standards to ensure what you intemded in your design works across all browsers.<br>
+			Use the following link to verify HTML - <a href="http://validator.w3.org/#validate_by_input">http://validator.w3.org/#validate_by_input</a><br>
+			Use the following link to verify CSS - </span></span><a href="http://jigsaw.w3.org/css-validator/#validate_by_input">http://jigsaw.w3.org/css-validator/#validate_by_input</a><br>
+			</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
